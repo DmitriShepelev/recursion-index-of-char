@@ -18,22 +18,7 @@ namespace RecursionIndexOfChar
                 return -1;
             }
 
-            static int GetIndex(int index, string str, char value)
-            {
-                if (str[index] == value)
-                {
-                    return index;
-                }
-
-                if (index == str.Length - 1)
-                {
-                    return -1;
-                }
-
-                return GetIndex(index + 1, str, value);
-            }
-
-            return GetIndex(0, str, value);
+            return GetIndexRecursively.GetIndexOfChar(str, value, 0, str.Length - 1);
         }
 
         public static int GetIndexOfChar(string str, char value, int startIndex, int count)
